@@ -2,6 +2,7 @@ local py = require('fb.python')
 
 py.exec([=[
 import sys
+import os
 sys.path.append(os.getcwd())
 import read_dicom
 ]=])
@@ -12,7 +13,7 @@ function read_file(file_name)
 	return data,attr
 end
 
-data  = read_file('sampleout.dcm')
+data  = read_file('000001.dcm')
 
 
 --[=[
